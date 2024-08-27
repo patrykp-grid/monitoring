@@ -17,7 +17,7 @@ docker run -d --name jmx-exporter --network spring-petclinic_default -p 1234:123
 
 ### Validate that exporter endpoint is accessible
 
-![JMX exporter](exporter-endpoint.png)
+![JMX exporter](images/exporter-endpoint.png)
 
 ### Run Prometheus Docker container scrapping JMX metrics
 
@@ -27,7 +27,7 @@ docker run -d --name prometheus --network spring-petclinic_default -p 9090:9090 
 
 ### Validate that Prometheus gathers data by running the following queries
 
-![Prometheus](prometheus-query.png)
+![Prometheus](images/prometheus-query.png)
 
 ### Run Grafana container
 
@@ -37,11 +37,11 @@ docker run -d --name grafana --network spring-petclinic_default -p 3000:3000 gra
 
 ### Create Prometheus data source in the user interface
 
-![Prometheus data source](prometheus-datasource.png)
+![Prometheus data source](images/prometheus-datasource.png)
 
 ### Import dashboard with its id - 10519
 
-![Import dashboard](dashboard.png)
+![Import dashboard](images/dashboard.png)
 
 ## Logging Part 
 
@@ -86,7 +86,7 @@ docker run -d --name=promtail  --network spring-petclinic_default  -v ${ABSOLUTE
 
 ### Log in to grafana and add Loki as a data source
 
-![Loki data source](loki-datasource.png)
+![Loki data source](images/loki-datasource.png)
 
 
 
